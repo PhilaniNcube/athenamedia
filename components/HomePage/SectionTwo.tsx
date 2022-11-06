@@ -1,6 +1,6 @@
 const SectionTwo = () => {
   return (
-    <section className="my-20">
+    <section className="my-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-24">
         <div className="w-full">
           <div className="rounded-full w-full aspect-square bg-slate-200">

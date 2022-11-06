@@ -1,8 +1,13 @@
+import { Bars3Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false)
 
   const router = useRouter()
 
@@ -31,7 +36,7 @@ const Navbar = () => {
   return (
     <header className="py-3">
       {/**Desktop Navigation**/}
-      <div className="max-w-7xl py-2 hidden  mx-auto px-4 items-center lg:flex justify-between">
+      <div className="max-w-7xl py-2 hidden  mx-auto px-4 items-center md:flex justify-between">
         <Link href="/" className="cursor-pointer">
           <Image
             className="w-48 object-cover"
@@ -55,6 +60,75 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
+      </div>
+
+      {/***Mobile Nav */}
+      <div className="py-8 md:hidden mx-auto px-4 items-center flex justify-between  overflow-hidden">
+        <Link href="/" className="cursor-pointer">
+          <Image
+            className="w-36 object-cover"
+            src="/assets/shared/desktop/logo-dark.png"
+            alt="logo"
+            width={404}
+            height={54}
+          />
+        </Link>
+        {open ? (
+          <RiCloseLine
+            onClick={() => setOpen(!open)}
+            className="text-slate-900 h-8 w-8"
+          />
+        ) : (
+          <Bars3Icon
+            onClick={() => setOpen(!open)}
+            className="text-slate-900 h-8 w-8"
+          />
+        )}
+
+        {open && (
+          <div className="absolute inset-0 bg-slate-50 z-20 h-[50vh]">
+            <div className="py-8 md:hidden mx-auto px-4 items-center flex justify-between  overflow-hidden">
+              <Link
+                href="/"
+                className="cursor-pointer"
+                onClick={() => setOpen(!open)}
+              >
+                <Image
+                  className="w-36 object-cover"
+                  src="/assets/shared/desktop/logo-dark.png"
+                  alt="logo"
+                  width={404}
+                  height={54}
+                />
+              </Link>
+              {open ? (
+                <RiCloseLine
+                  onClick={() => setOpen(!open)}
+                  className="text-slate-900 h-8 w-8"
+                />
+              ) : (
+                <Bars3Icon
+                  onClick={() => setOpen(!open)}
+                  className="text-slate-900 h-8 w-8"
+                />
+              )}
+            </div>
+            <nav className="flex flex-col h-[40vh] justify-around items-start px-16 bg-black ">
+              {links.map((item) => (
+                <Link
+                  key={item.id}
+                  onClick={() => setOpen(!open)}
+                  className={`${
+                    item.active ? "text-peach" : "text-slate-50"
+                  } hover:text-peach text-2xl uppercase`}
+                  href={item.href}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

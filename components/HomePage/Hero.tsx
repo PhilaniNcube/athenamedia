@@ -5,7 +5,7 @@ import { LightButton } from "../Buttons/Button";
 const Hero = () => {
   return (
     <section className="py-6">
-      <div className="max-w-7xl mx-auto px-4 bg-peach relative overflow-hidden rounded-3xl min-h-[70vh] max-h-[70vh]">
+      <div className="max-w-7xl mx-auto px-4 bg-peach relative overflow-hidden py-10 md:rounded-3xl min-h-[70vh] max-h-[70vh]">
         <svg
           className="absolute top-0 right-0 bottom-0 h-full"
           width="640"
@@ -29,11 +29,11 @@ const Hero = () => {
           />
         </svg>
         <div className="w-full h-full grid grid-cols-2">
-          <div className="col-span-1 flex flex-col justify-center h-[70vh] pl-3 ">
+          <div className="col-span-2 md:col-span-1 flex flex-col justify-center lg:h-[70vh] pl-3 ">
             <h1 className="text-white text-2xl md:text-4xl lg:text-5xl">
               Cutting-Edge custom designs and digital branding solutions
             </h1>
-            <p className="text-white mb-4 text-xl tracking-wide mt-4 pr-10">
+            <p className="text-white mb-1 md:mb-4 text-sm md:text-xl tracking-wide mt-4 pr-10">
               We are experienced in creating fully responsive websites to the
               latest in technologies in web development used by the largest
               brands on the planet. We also craft engaging brand experiences.
@@ -43,13 +43,13 @@ const Hero = () => {
               <LightButton>Learn More</LightButton>
             </Link>
           </div>
-          <div className="flex justify-center col-span-1">
+          <div className="flex -translate-y-10 md:translate-y-0 justify-center col-span-2 md:col-span-1">
             <Image
               width={624}
               height={913}
               alt="Hero Image"
               src="/assets/home/desktop/hero-phone.png"
-              className="w-[67vh] object-center object-cover col-span-1"
+              className="w-full md:w-[67vh] object-center object-cover col-span-1"
             />
           </div>
         </div>
