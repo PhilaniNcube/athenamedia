@@ -82,7 +82,7 @@ const SectionOne = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex md:hidden flex-col gap-4">
         {" "}
         <div className="w-full col-span-1 relative isolate overflow-hidden row-start-2 row-end-3 rounded-2xl col-start-2 col-end-2 flex items-center justify-center">
           <Image

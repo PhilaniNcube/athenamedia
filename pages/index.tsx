@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Create Next App</title>
+        <title>Athena Media</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
