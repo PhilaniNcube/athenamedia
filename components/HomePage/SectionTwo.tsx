@@ -7,6 +7,7 @@ const SectionTwo = () => {
             <img
               src="/assets/home/desktop/passionate.svg"
               className="w-full object-cover"
+              alt="Passionate"
             />
           </div>
           <div className="mt-4">
@@ -25,6 +26,7 @@ const SectionTwo = () => {
             <img
               src="/assets/home/desktop/resourceful.svg"
               className="w-full object-cover"
+              alt="Resourceful"
             />
           </div>
           <div className="mt-4">
@@ -43,6 +45,7 @@ const SectionTwo = () => {
             <img
               src="/assets/home/desktop/friendly.svg"
               className="w-full object-cover"
+              alt="Friendly"
             />
           </div>
           <div className="mt-4">
