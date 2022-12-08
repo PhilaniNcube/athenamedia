@@ -5,7 +5,7 @@ import { LightButton } from "../Buttons/Button";
 const Hero = () => {
   return (
     <section className="py-6">
-      <div className="max-w-7xl mx-auto px-4 bg-peach relative overflow-hidden py-10 md:rounded-3xl min-h-[70vh] max-h-[70vh]">
+      <div className="max-w-7xl mx-auto px-4 bg-peach relative overflow-hidden py-10 md:rounded-3xl min-h-[70vh] max-h-[75vh] ">
         <svg
           className="absolute top-0 right-0 bottom-0 h-full"
           width="640"
@@ -14,8 +14,8 @@ const Hero = () => {
         >
           <defs>
             <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a">
-              <stop stop-color="#5D0202" stop-opacity="0" offset="0%" />
-              <stop stop-color="#5D0202" stop-opacity=".498" offset="100%" />
+              <stop stop-color="#5D0202" stopOpacity="0" offset="0%" />
+              <stop stop-color="#5D0202" stopOpacity=".498" offset="100%" />
             </linearGradient>
           </defs>
           <circle
@@ -31,16 +31,13 @@ const Hero = () => {
         <div className="w-full h-full grid grid-cols-2">
           <div className="col-span-2 md:col-span-1 flex flex-col justify-center lg:h-[70vh] pl-3 ">
             <h1 className="text-white text-2xl md:text-4xl lg:text-5xl">
-              Cutting-Edge custom designs and digital branding solutions
+              Empowering your online presence with custom web solutions.
             </h1>
-            <p className="text-white mb-1 md:mb-4 text-sm md:text-xl tracking-wide mt-4 pr-10">
-              We are experienced in creating fully responsive websites to the
-              latest in technologies in web development used by the largest
-              brands on the planet. We also craft engaging brand experiences.
-              Find out more about our services.
+            <p className="text-white mb-1 md:mb-4 text-sm md:text-xl tracking-wide mt-4 pr-6">
+               We are dedicated tocrafting custom web solutions that deliver results for your business. We use the latest technology and best practices to create websites that are not only visually appealing, but also optimized for maximum performance.
             </p>
-            <Link href="#more">
-              <LightButton>Learn More</LightButton>
+            <Link href="/contact">
+              <LightButton>Lets Talk</LightButton>
             </Link>
           </div>
           <div className="flex -translate-y-10 md:translate-y-0 justify-center col-span-2 md:col-span-1">
