@@ -33,23 +33,23 @@ const SectionOne = () => {
 
         <div className="w-full col-span-1 relative isolate overflow-hidden row-start-1 row-end-2 rounded-2xl col-start-2 col-end-2 flex items-center justify-center">
           <Image
-            src="/assets/home/desktop/corporate.jpg"
+            src="/images/analytics.jpeg"
             width={3000}
             height={2000}
-            alt="Graphic Design"
+            alt="Website Analytics"
             quality={100}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-slate-800/60">
             <h2 className="text-white text-xl md:text-2xl lg:text-4xl uppercase font-medium">
-              Corporate Identity
+              Website Analytics
             </h2>
             <span className="flex items-center space-x-2 mt-3">
               <Link
-                href="/corporate-identity"
+                href="/website-analytics"
                 className="text-white text-md md:text-lg uppercase hover:text-peach"
               >
-                View Projects
+                View Services
               </Link>
               <ChevronRightIcon className="h-8 w-8 text-peach" />
             </span>
@@ -58,23 +58,23 @@ const SectionOne = () => {
 
         <div className="w-full col-span-1 relative isolate overflow-hidden row-start-2 row-end-3 rounded-2xl col-start-2 col-end-2 flex items-center justify-center">
           <Image
-            src="/assets/home/desktop/graphic-design.jpg"
+            src="/images/digital-marketing.jpeg"
             width={541}
             height={308}
-            alt="Graphic Design"
+            alt="Digital Marketing"
             quality={100}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-slate-800/60">
             <h2 className="text-white text-xl md:text-2xl lg:text-4xl uppercase font-medium">
-              Graphic Design
+              Digital Marketing
             </h2>
             <span className="flex items-center space-x-2 mt-3">
               <Link
-                href="/graphic-design"
+                href="/digital-marketing"
                 className="text-white text-md md:text-lg uppercase hover:text-peach"
               >
-                View Projects
+                View Services
               </Link>
               <ChevronRightIcon className="h-8 w-8 text-peach" />
             </span>
@@ -86,23 +86,23 @@ const SectionOne = () => {
         {" "}
         <div className="w-full col-span-1 relative isolate overflow-hidden row-start-2 row-end-3 rounded-2xl col-start-2 col-end-2 flex items-center justify-center">
           <Image
-            src="/assets/home/desktop/graphic-design.jpg"
+            src="/images/digital-marketing.jpeg"
             width={541}
             height={308}
-            alt="Graphic Design"
+            alt="Digital Marketing"
             quality={100}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-slate-800/60">
             <h2 className="text-white text-xl md:text-2xl lg:text-4xl uppercase font-medium">
-              Graphic Design
+              Digital Marketing
             </h2>
             <span className="flex items-center space-x-2 mt-3">
               <Link
-                href="/graphic-design"
+                href="/digital-marketing"
                 className="text-white text-md md:text-lg uppercase hover:text-peach"
               >
-                View Projects
+                View Services
               </Link>
               <ChevronRightIcon className="h-8 w-8 text-peach" />
             </span>
@@ -134,23 +134,23 @@ const SectionOne = () => {
         </div>
         <div className="w-full col-span-1 relative isolate overflow-hidden row-start-1 row-end-2 rounded-2xl col-start-2 col-end-2 flex items-center justify-center">
           <Image
-            src="/assets/home/desktop/corporate.jpg"
+            src="/images/analytics.jpeg"
             width={3000}
             height={2000}
-            alt="Graphic Design"
+            alt="Website Analytics"
             quality={100}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-slate-800/60">
             <h2 className="text-white text-xl md:text-2xl lg:text-4xl uppercase font-medium">
-              Corporate Identity
+              Website Analytics
             </h2>
             <span className="flex items-center space-x-2 mt-3">
               <Link
-                href="/corporate-identity"
+                href="/website-analytics"
                 className="text-white text-md md:text-lg uppercase hover:text-peach"
               >
-                View Projects
+                View Services
               </Link>
               <ChevronRightIcon className="h-8 w-8 text-peach" />
             </span>
