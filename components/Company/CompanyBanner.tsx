@@ -9,11 +9,11 @@ const CompanyBanner = () => {
             About Us
           </h1>
           <p className="text-md sm:pr-8 lg:pr-16 mt-4 text-white tracking-wider">
-            Founded in 2010, we are a creative agency that produces lasting
-            results for our clients. We’ve partnered with many startups,
-            corporations, and nonprofits alike to craft designs that make real
-            impact. We’re always looking forward to creating brands, products,
-            and digital experiences that connect with our clients' audiences.
+            At Athena Media, we believe that your website is the heart of your
+            online presence. That's why we offer a full range of web design and
+            development services to help you create a stunning, effective, and
+            user-friendly website that will attract and engage your audience.
+
           </p>
         </div>
         <Image

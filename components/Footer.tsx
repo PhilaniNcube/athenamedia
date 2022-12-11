@@ -37,13 +37,19 @@ const Footer = () => {
     <footer className="bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 pt-28 pb-16">
         <div className="max-w-7xl py-2  border-b border-slate-100/30 mx-auto items-center lg:flex justify-between">
-          <Image
-            className="w-48 my-4 object-cover"
-            src="/assets/shared/desktop/logo-light.png"
+          <Link
+            href="/"
+            className="cursor-pointer font-bold uppercase text-xl text-peach"
+          >
+            {/* <Image
+            className="w-48 object-cover"
+            src="/assets/shared/desktop/logo-dark.png"
             alt="logo"
             width={404}
             height={54}
-          />
+          /> */}
+            Athena Media
+          </Link>
 
           <nav className="flex items-center space-x-4">
             {links.map((item) => (
@@ -63,13 +69,13 @@ const Footer = () => {
           <div className="flex-1 flex w-full justify-between">
             <div>
               <h4 className="text-slate-200 text-xs md:text-sm font-bold">
-                Designo Central Office
+                Port Elizabeth Central Office
               </h4>
               <h4 className="text-slate-200 text-xs md:text-sm">
-                3886 Wellington Street
+                16 Strand Avenue, Humewood
               </h4>
               <h4 className="text-slate-200 text-xs md:text-sm">
-                Toronto, Ontario M9C 3J5
+                Port Elizabeth, 6001
               </h4>
             </div>
             <div>
@@ -84,7 +90,7 @@ const Footer = () => {
               </h4>
             </div>
           </div>
-          <div className="flex-1 py-4 flex space-x-3 justify-end items-center">
+          <div className="hidden flex-1 py-4  space-x-3 justify-end items-center">
             <RiFacebookBoxFill className="h-6 w-6 text-peach hover:text-light-peach" />
             <RiYoutubeFill className="h-6 w-6 text-peach hover:text-light-peach" />
             <RiTwitterFill className="h-6 w-6 text-peach hover:text-light-peach" />

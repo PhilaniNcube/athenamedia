@@ -17,17 +17,15 @@ const CompanySectionOne = () => {
           </h2>
           <p className="text-slate-800 text-md mt-3">
             {" "}
-            We are a crew of strategists, problem-solvers, and technologists.
-            Every design is thoughtfully crafted from concept to launch,
-            ensuring success in its given market. We are constantly updating our
-            skills in a myriad of platforms.
+            Our team of expert designers, developers, and marketers will work
+            with you to understand your business goals and create a custom
+            solution that will help you achieve them.
           </p>
           <p className="text-slate-800 text-md mt-3">
-            Our team is multi-disciplinary and we are not merely interested in
-            form — content and meaning are just as important. We give great
-            importance to craftsmanship, service, and prompt delivery. Clients
-            have always been impressed with our high-quality outcomes that
-            encapsulates their brand’s story and mission.
+            With our focus on innovation, creativity, and customer satisfaction,
+            you can trust us to deliver the best possible results for your
+            business. Contact us today to learn more about how we can help you
+            succeed online.
           </p>
         </div>
       </div>

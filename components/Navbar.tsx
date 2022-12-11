@@ -20,12 +20,26 @@ const Navbar = () => {
     },
     {
       id: 2,
-      href: "/location",
-      name: "Locations",
-      active: router.asPath === "/location",
+      href: "/web-development",
+      name: "Web Development",
+      active: router.asPath === "/web-development",
     },
+
     {
       id: 3,
+      href: "/digital-marketing",
+      name: "Marketing",
+      active: router.asPath === "/digital-marketing",
+    },
+
+    {
+      id: 4,
+      href: "/website-analytics",
+      name: "Analytics",
+      active: router.asPath === "/website-analytics",
+    },
+    {
+      id: 5,
       href: "/contact",
       name: "Contact",
       active: router.asPath === "/contact",
@@ -36,15 +50,19 @@ const Navbar = () => {
   return (
     <header className="py-3">
       {/**Desktop Navigation**/}
-      <div className="max-w-7xl py-2 hidden  mx-auto px-4 items-center md:flex justify-between">
-        <Link href="/" className="cursor-pointer">
-          <Image
+      <div className="max-w-7xl py-2 hidden  mx-auto px-4 items-center md:flex  justify-between">
+        <Link
+          href="/"
+          className="cursor-pointer font-bold uppercase text-xl text-peach"
+        >
+          {/* <Image
             className="w-48 object-cover"
             src="/assets/shared/desktop/logo-dark.png"
             alt="logo"
             width={404}
             height={54}
-          />
+          /> */}
+          Athena Media
         </Link>
 
         <nav className="flex items-center space-x-4">
@@ -64,14 +82,18 @@ const Navbar = () => {
 
       {/***Mobile Nav */}
       <div className="py-8 md:hidden mx-auto px-4 items-center flex justify-between  overflow-hidden">
-        <Link href="/" className="cursor-pointer">
-          <Image
+        <Link
+          href="/"
+          className="cursor-pointer uppercase text-xl text-peach font-bold"
+        >
+          {/* <Image
             className="w-36 object-cover"
             src="/assets/shared/desktop/logo-dark.png"
             alt="logo"
             width={404}
             height={54}
-          />
+          /> */}
+          Athena Media
         </Link>
         {open ? (
           <RiCloseLine
@@ -90,16 +112,17 @@ const Navbar = () => {
             <div className="py-8 md:hidden mx-auto px-4 items-center flex justify-between  overflow-hidden">
               <Link
                 href="/"
-                className="cursor-pointer"
+                className="cursor-pointer uppercase text-xl text-peach font-bold"
                 onClick={() => setOpen(!open)}
               >
-                <Image
-                  className="w-36 object-cover"
-                  src="/assets/shared/desktop/logo-dark.png"
-                  alt="logo"
-                  width={404}
-                  height={54}
-                />
+                {/* <Image
+            className="w-36 object-cover"
+            src="/assets/shared/desktop/logo-dark.png"
+            alt="logo"
+            width={404}
+            height={54}
+          /> */}
+                Athena Media
               </Link>
               {open ? (
                 <RiCloseLine

@@ -9,7 +9,7 @@ const contact = () => {
             <title>Contact Us</title>
            </Head>
            <ContactForm />
-           <LocationSection />
+
          </>
          )
 };

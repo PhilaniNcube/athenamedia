@@ -14,8 +14,8 @@ const Hero = () => {
         >
           <defs>
             <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a">
-              <stop stop-color="#5D0202" stopOpacity="0" offset="0%" />
-              <stop stop-color="#5D0202" stopOpacity=".498" offset="100%" />
+              <stop stopColor="#5D0202" stopOpacity="0" offset="0%" />
+              <stop stopColor="#5D0202" stopOpacity=".498" offset="100%" />
             </linearGradient>
           </defs>
           <circle
