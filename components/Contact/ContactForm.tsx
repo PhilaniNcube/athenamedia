@@ -4,6 +4,8 @@ import {  LightButton } from "../Buttons/Button";
 import { useForm } from "react-hook-form";
 import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
+import analytics from "../../utils/analytics";
+import { useRouter } from "next/router";
 
 interface FormInputs {
   name: string;
@@ -13,6 +15,8 @@ interface FormInputs {
 }
 
 const ContactForm = () => {
+
+  const router = useRouter()
 
   const {
     register,
@@ -24,9 +28,14 @@ const ContactForm = () => {
 
    const onSubmit = async (data: FormInputs) => {
 
+       analytics.track("generate_lead", {
+         location: "contact_page",
+       });
+
    await sendContactForm(data)
 
     alert('Thank you for contacting us. We will be in touch with you soon!')
+    router.push(`/website-analytics`)
    };
 
 
