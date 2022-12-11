@@ -103,7 +103,7 @@ const Projects = () => {
           </Link>
         ))}
       </div>
-      <div className="max-w-7xl mx-auto mt-12 px-4 lg:px-0 grid grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto mt-12 px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="w-full relative isolate rounded-2xl overflow-hidden">
           <Image
             src="/images/analytics.jpeg"
