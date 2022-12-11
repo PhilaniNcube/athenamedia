@@ -82,7 +82,11 @@ const Projects = () => {
     <section className="my-8">
       <div className="max-w-7xl mx-auto px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {projects.map((item, i) => (
-          <Link href={item.url} key={i} className="w-full shadow rounded-xl overflow-hidden">
+          <Link
+            href={item.url}
+            key={i}
+            className="w-full shadow rounded-xl overflow-hidden"
+          >
             <Image
               src={item.image}
               width={1911}
@@ -109,17 +113,17 @@ const Projects = () => {
             className="w-full aspect-video object-cover"
           />
           <div className="absolute inset-0 bg-slate-700/60 flex flex-col justify-center items-center text-center">
-            <h3 className="text-white text-2xl md:text-3xl font-medium uppercase">
+            <h3 className="text-white text-lg md:text-2xl lg:text-3xl font-medium uppercase">
               Website Analytics
             </h3>
             <span className="flex items-center space-x-2 mt-3">
               <Link
                 href="/website-analytics"
-                className="text-white text-lg uppercase hover:text-peach"
+                className="text-white text-sm lg:text-lg uppercase hover:text-peach"
               >
                 View Services
               </Link>
-              <ChevronRightIcon className="h-8 w-8 text-peach" />
+              <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8 text-peach" />
             </span>
           </div>
         </div>
@@ -132,17 +136,17 @@ const Projects = () => {
             className="w-full aspect-video object-cover"
           />
           <div className="absolute inset-0 bg-slate-700/60 flex flex-col justify-center items-center text-center">
-            <h3 className="text-white text-2xl md:text-3xl font-medium uppercase">
+            <h3 className="text-white text-lg md:text-2xl lg:text-3xl font-medium uppercase">
               Digital Marketing
             </h3>
             <span className="flex items-center space-x-2 mt-3">
               <Link
                 href="/digital-marketing"
-                className="text-white text-lg uppercase hover:text-peach"
+                className="text-white text-sm lg:text-lg uppercase hover:text-peach"
               >
                 View Services
               </Link>
-              <ChevronRightIcon className="h-8 w-8 text-peach" />
+              <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8 text-peach" />
             </span>
           </div>
         </div>
