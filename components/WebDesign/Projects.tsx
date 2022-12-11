@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import {ChevronRightIcon} from "@heroicons/react/24/outline";
 
 const projects = [
   {
@@ -80,7 +80,7 @@ const projects = [
 const Projects = () => {
   return (
     <section className="my-8">
-      <div className="max-w-7xl mx-auto px-4 lg:px-0 grid grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {projects.map((item, i) => (
           <Link href={item.url} key={i} className="w-full shadow rounded-xl overflow-hidden">
             <Image
