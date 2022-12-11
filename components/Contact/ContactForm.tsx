@@ -2,6 +2,8 @@
 import Image from "next/image";
 import {  LightButton } from "../Buttons/Button";
 import { useForm } from "react-hook-form";
+import { sendContactForm } from "../../lib/api";
+import Link from "next/link";
 
 interface FormInputs {
   name: string;
@@ -17,9 +19,15 @@ const ContactForm = () => {
     setError,
     formState: { errors },
     handleSubmit,
+
   } = useForm<FormInputs>();
 
-   const onSubmit = (data: FormInputs) => console.log(data);
+   const onSubmit = async (data: FormInputs) => {
+
+   await sendContactForm(data)
+
+    alert('Thank you for contacting us. We will be in touch with you soon!')
+   };
 
 
 
@@ -53,21 +61,21 @@ const ContactForm = () => {
             <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium">
               Contact Us
             </h1>
-            <p className="text-white mt-2 text-md lg:text-lg">
+            <p className="text-white mt-2 text-md mb-5 lg:text-lg">
               {" "}
               Ready to take it to the next level? Let’s talk about your project
               or idea and find out how we can help your business grow. If you
               are looking for unique digital experiences that’s relatable to
               your users, drop us a line.
             </p>
-            <p className="text-white mt-2 text-md lg:text-lg">
+            {/* <p className="text-white mt-2 text-md lg:text-lg">
               {" "}
               P : 078 3115 1400
-            </p>
-            <p className="text-white mt-2 text-md lg:text-lg">
+            </p> */}
+            <Link href="mailto:info@athenamedia.co.za"  className="text-white mt-5 text-md lg:text-lg">
               {" "}
-              M : contact@designo.uk
-            </p>
+              M : info@athenamedia.co.za
+            </Link>
           </div>
           <div className="w-full p-8 lg:p-16">
             <form onSubmit={handleSubmit(onSubmit)} className="text-white">
@@ -78,6 +86,7 @@ const ContactForm = () => {
                 <input
                   {...register("name", {
                     required: "Name Cannot be empty.",
+
                   })}
                   id="name"
                   name="name"
@@ -119,25 +128,12 @@ const ContactForm = () => {
                   className="bg-transparent border-b focus:border-b-2 text-lg focus:outline-none px-4 py-2 placeholder:text-slate-200"
                   placeholder="Email Address"
                 />
-                {errors.email && (
+                {errors.email ? (
                   <span className="absolute top-0 right-0 flex space-x-4">
                     <p className="italic">{errors.email.message}</p>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      className="h-8 w-8"
-                    >
-                      <g fill="none" fill-rule="evenodd">
-                        <circle cx="10" cy="10" r="10" fill="#FFF" />
-                        <path
-                          fill="#E7816B"
-                          d="M11 14v2H9v-2h2zm0-9v7H9V5h2z"
-                        />
-                      </g>
-                    </svg>
+
                   </span>
-                )}
+                ) : ""}
               </div>
               <div className="flex flex-col w-full mt-2 relative isolate">
                 <label className="hidden" htmlFor="tel">
@@ -154,7 +150,7 @@ const ContactForm = () => {
                   className="bg-transparent border-b focus:border-b-2 text-lg focus:outline-none px-4 py-2 placeholder:text-slate-200"
                   placeholder="Phone"
                 />{" "}
-                {errors.tel && (
+                {errors.tel ? (
                   <span className="absolute top-0 right-0 flex space-x-4">
                     <p className="italic">{errors.tel.message}</p>
                     <svg
@@ -172,7 +168,7 @@ const ContactForm = () => {
                       </g>
                     </svg>
                   </span>
-                )}
+                ): ""}
               </div>
               <div className="flex flex-col w-full mt-4 relative isolate">
                 <label className="hidden" htmlFor="message">
