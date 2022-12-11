@@ -49,7 +49,7 @@ const DigitalMarketingServices = () => {
       <div className="max-w-7xl mx-auto mt-12 px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="w-full relative isolate rounded-2xl overflow-hidden">
           <Image
-            src="/assets/home/desktop/corporate.jpg"
+            src="/images/analytics.jpeg"
             width={3000}
             height={2000}
             alt="Website Analytics"
@@ -72,10 +72,10 @@ const DigitalMarketingServices = () => {
         </div>
         <div className="w-full relative isolate rounded-2xl overflow-hidden">
           <Image
-            src="/assets/home/desktop/digital-marketing.jpg"
+            src="/images/digital-marketing.jpeg"
             width={3000}
             height={2000}
-            alt="Graphic Design"
+            alt="Web Design"
             className="w-full aspect-video object-cover"
           />
           <div className="absolute inset-0 bg-slate-700/60 flex flex-col justify-center items-center text-center">
