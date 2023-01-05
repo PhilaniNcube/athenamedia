@@ -17,7 +17,7 @@ const Locations = () => {
             <div className="text-slate-700 text-md">
               <h4 className="font-medium">Contact</h4>
 
-              <p>M : ziyanda@athenamedia.co.za</p>
+            
               <p>M : info@athenamedia.co.za</p>
             </div>
           </div>
