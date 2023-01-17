@@ -12,6 +12,14 @@ const projects = [
     mobileImage: "/images/capegadgets_mobile.png",
   },
   {
+    title: "The Chapman",
+    details:
+      "The Chapman is a hotel and restaurant in Port Elizabeth. We developed this website as a replacement for their existing website to give it a fresh look.",
+    url: "http://www.chapman.co.za",
+    image: "/images/chapman_desktop.png",
+    mobileImage: "/images/chapman_mobile.png",
+  },
+  {
     title: "Hotwater24",
     details:
       "This is a marketing website for a business supplying and installing gas geysers",
