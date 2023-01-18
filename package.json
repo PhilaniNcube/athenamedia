@@ -9,6 +9,7 @@
     "@analytics/google-tag-manager": "^0.5.3",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "analytics": "^0.8.1",
     "framer-motion": "^7.6.4",
     "next": "latest",

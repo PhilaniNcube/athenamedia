@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['"Jost"', "Helvetica", "Verdana", "Tahoma", "sans-serif"],
+        sans: ['"Jost"', "Helvetica", "Verdana", "Tahoma", "sans-serif"],
       },
       colors: {
         peach: "#e7816b",
@@ -15,5 +15,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

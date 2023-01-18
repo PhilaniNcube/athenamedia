@@ -21,12 +21,33 @@ const Footer = () => {
     },
     {
       id: 2,
-      href: "/location",
-      name: "Locations",
-      active: router.asPath === "/location",
+      href: "/web-development",
+      name: "Web Development",
+      active: router.asPath === "/web-development",
     },
+
     {
       id: 3,
+      href: "/digital-marketing",
+      name: "Marketing",
+      active: router.asPath === "/digital-marketing",
+    },
+
+    {
+      id: 4,
+      href: "/website-analytics",
+      name: "Analytics",
+      active: router.asPath === "/website-analytics",
+    },
+
+    {
+      id: 5,
+      href: "/blog",
+      name: "Blog",
+      active: router.asPath === "/blog",
+    },
+    {
+      id: 6,
       href: "/contact",
       name: "Contact",
       active: router.asPath === "/contact",
@@ -51,7 +72,7 @@ const Footer = () => {
             Athena Media
           </Link>
 
-          <nav className="flex items-center space-x-4">
+          <nav className="flex flex-col lg:flex-row items-start lg:items-center mt-4 space-x-0 space-y-3 lg:space-y-3 lg:space-x-4">
             {links.map((item) => (
               <Link
                 key={item.id}

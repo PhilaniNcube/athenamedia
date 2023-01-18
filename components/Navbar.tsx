@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
 
@@ -38,8 +38,15 @@ const Navbar = () => {
       name: "Analytics",
       active: router.asPath === "/website-analytics",
     },
+
     {
       id: 5,
+      href: "/blog",
+      name: "Blog",
+      active: router.asPath === "/blog",
+    },
+    {
+      id: 6,
       href: "/contact",
       name: "Contact",
       active: router.asPath === "/contact",
