@@ -112,10 +112,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="hidden flex-1 py-4  space-x-3 justify-end items-center">
-            <RiFacebookBoxFill className="h-6 w-6 text-peach hover:text-light-peach" />
-            <RiYoutubeFill className="h-6 w-6 text-peach hover:text-light-peach" />
-            <RiTwitterFill className="h-6 w-6 text-peach hover:text-light-peach" />
-            <RiInstagramLine className="h-6 w-6 text-peach hover:text-light-peach" />
+
           </div>
         </div>
       </div>

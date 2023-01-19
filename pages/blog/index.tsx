@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Fragment } from "react";
 import BlogGrid from "../../components/Blog/BlogGrid";
 import BlogHero from "../../components/Blog/BlogHero";
 import getArticles from "../../helpers/getArticles";
@@ -14,7 +13,7 @@ const Blog = ({articles}:ComponentProps) => {
 console.log({ articles });
 
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Blog | Athena Media</title>
         <meta
@@ -64,7 +63,7 @@ console.log({ articles });
         <BlogGrid articles={articles} />
 
       </main>
-    </Fragment>
+    </>
   );
 };
 export default Blog;

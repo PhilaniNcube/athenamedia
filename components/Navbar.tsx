@@ -1,8 +1,9 @@
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+
 import { RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
@@ -103,7 +104,7 @@ const Navbar = () => {
           Athena Media
         </Link>
         {open ? (
-          <RiCloseLine
+          <XMarkIcon
             onClick={() => setOpen(!open)}
             className="text-slate-900 h-8 w-8"
           />
@@ -132,7 +133,7 @@ const Navbar = () => {
                 Athena Media
               </Link>
               {open ? (
-                <RiCloseLine
+                <XMarkIcon
                   onClick={() => setOpen(!open)}
                   className="text-slate-900 h-8 w-8"
                 />

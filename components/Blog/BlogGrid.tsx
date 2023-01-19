@@ -14,7 +14,7 @@ console.log({articles})
         Come here to learn about the newest web development and digital
         marketing trends and technologies that can help elevate your brand
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
         {articles.map((article) => (
           <div className="w-full rounded-lg overflow-hidden" key={article.id}>
             <div className="relative isolate">
