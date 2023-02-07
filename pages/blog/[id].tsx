@@ -21,7 +21,7 @@ async function getServerSideProps({params: {id}}:{params: {id:string}}) {
 
   const url = process.env.NEXT_PUBLIC_STRAPI_URL;
 
-   const response =  await fetch(`${url}/api/blogs/${id}?populate=*`)
+   const response =  await fetch(`${url}/api/blogs/${id}`)
 
    const article = response.json()
 
