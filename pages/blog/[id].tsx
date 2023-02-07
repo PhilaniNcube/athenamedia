@@ -18,7 +18,9 @@ export default BlogArticle
 
 
 async function getServerSideProps({params: {id}}:{params: {id:string}}) {
-   const article = getArticle(id)
+   const response =  await fetch(`${url}/api/blogs/${id}?populate=*`)
+
+   const article = response.json()
 
    return {
     props: {
