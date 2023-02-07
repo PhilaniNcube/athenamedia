@@ -18,6 +18,9 @@ export default BlogArticle
 
 
 async function getServerSideProps({params: {id}}:{params: {id:string}}) {
+
+  const url = process.env.NEXT_PUBLIC_STRAPI_URL;
+
    const response =  await fetch(`${url}/api/blogs/${id}?populate=*`)
 
    const article = response.json()
