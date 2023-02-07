@@ -17,7 +17,7 @@ const BlogArticle = ({article}:ComponentProps) => {
 export default BlogArticle
 
 
-async function getServerSideProps({params: {id}}) {
+async function getServerSideProps({params: {id}}:{params: {id:string}}) {
    const article = getArticle(id)
 
    return {
