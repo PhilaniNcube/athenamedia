@@ -10,7 +10,7 @@ const BlogArticle = ({article}:ComponentProps) => {
   console.log(article)
 
   return (
-    <div>BlogArticle</div>
+    <div>Blog Article</div>
   )
 }
 
