@@ -40,12 +40,12 @@ const Navbar = () => {
       active: router.asPath === "/website-analytics",
     },
 
-    {
-      id: 5,
-      href: "/blog",
-      name: "Blog",
-      active: router.asPath === "/blog",
-    },
+    // {
+    //   id: 5,
+    //   href: "/blog",
+    //   name: "Blog",
+    //   active: router.asPath === "/blog",
+    // },
     {
       id: 6,
       href: "/contact",
