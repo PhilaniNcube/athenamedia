@@ -8,7 +8,11 @@ export const metadata = {
     default: "Athena Media",
     template: "%s | Athena Media",
   },
-
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
   applicationName: "Athena Media",
   description:
     "Create a unique online presence with our custom website design services. We specialize in crafting visually stunning and user-friendly websites that are tailored to your brand's needs and goals. Let us bring your vision to life and elevate your online identity with our expert team of designers and developers.",
