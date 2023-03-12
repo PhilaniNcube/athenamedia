@@ -4,7 +4,10 @@ import Navbar from "../components/Navbar";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Athena Media",
+  title: {
+    default: "Athena Media",
+    template: "%s | Athena Media",
+  },
 
   applicationName: "Athena Media",
   description:
