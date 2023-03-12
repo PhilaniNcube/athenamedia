@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 import {
   RiFacebookBoxFill,
   RiYoutubeFill,
@@ -10,47 +11,41 @@ import {
 
 const Footer = () => {
 
-  const router = useRouter();
+  // const router = useRouter();
 
   const links = [
     {
       id: 1,
       href: "/company",
       name: "Our Company",
-      active: router.asPath === "/company",
+
     },
     {
       id: 2,
       href: "/web-development",
       name: "Web Development",
-      active: router.asPath === "/web-development",
+
     },
 
     {
       id: 3,
       href: "/digital-marketing",
       name: "Marketing",
-      active: router.asPath === "/digital-marketing",
+
     },
 
     {
       id: 4,
       href: "/website-analytics",
       name: "Analytics",
-      active: router.asPath === "/website-analytics",
+
     },
 
-    {
-      id: 5,
-      href: "/blog",
-      name: "Blog",
-      active: router.asPath === "/blog",
-    },
     {
       id: 6,
       href: "/contact",
       name: "Contact",
-      active: router.asPath === "/contact",
+
     },
   ];
 
@@ -77,7 +72,7 @@ const Footer = () => {
               <Link
                 key={item.id}
                 className={`${
-                  item.active ? "text-peach" : "text-slate-50"
+                  item.href === '' ? "text-peach" : "text-slate-50"
                 } hover:text-peach text-lg uppercase`}
                 href={item.href}
               >

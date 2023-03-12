@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type ComponentProps = {
   articles: Article[];
@@ -16,7 +17,7 @@ console.log({articles})
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
         {articles.map((article) => (
-          <div className="w-full rounded-lg overflow-hidden" key={article.id}>
+          <Link href={`/blog/${article.id}`} className="w-full rounded-lg overflow-hidden" key={article.id}>
             <div className="relative isolate">
               <Image
                 src={
@@ -43,7 +44,7 @@ console.log({articles})
             </h3>
 
             <p className="text-sm line-clamp-2 text-slate-500 mt-2">{article.attributes.excerpt}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </article>

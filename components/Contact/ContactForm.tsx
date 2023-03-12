@@ -1,3 +1,4 @@
+"use client"
 
 import Image from "next/image";
 import {  LightButton } from "../Buttons/Button";
@@ -5,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
 import analytics from "../../utils/analytics";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 interface FormInputs {
   name: string;
@@ -28,9 +29,6 @@ const ContactForm = () => {
 
    const onSubmit = async (data: FormInputs) => {
 
-       analytics.track("generate_lead", {
-         location: "contact_page",
-       });
 
    await sendContactForm(data)
 

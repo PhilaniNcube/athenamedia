@@ -1,7 +1,10 @@
+"use client"
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 import { useState } from "react";
 
 import { RiCloseLine } from "react-icons/ri";
@@ -10,47 +13,41 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false)
 
-  const router = useRouter()
 
   const links = [
     {
       id: 1,
       href: "/company",
       name: "Our Company",
-      active: router.asPath === "/company",
+
     },
     {
       id: 2,
       href: "/web-development",
       name: "Web Development",
-      active: router.asPath === "/web-development",
+
     },
 
     {
       id: 3,
       href: "/digital-marketing",
       name: "Marketing",
-      active: router.asPath === "/digital-marketing",
+
     },
 
     {
       id: 4,
       href: "/website-analytics",
       name: "Analytics",
-      active: router.asPath === "/website-analytics",
+
     },
 
-    {
-      id: 5,
-      href: "/blog",
-      name: "Blog",
-      active: router.asPath === "/blog",
-    },
+
     {
       id: 6,
       href: "/contact",
       name: "Contact",
-      active: router.asPath === "/contact",
+
     },
   ];
 
@@ -78,7 +75,7 @@ const Navbar = () => {
             <Link
               key={item.id}
               className={`${
-                item.active ? "text-peach" : "text-slate-800"
+                item.href === '' ? "text-peach" : "text-slate-800"
               } hover:text-peach text-lg uppercase`}
               href={item.href}
             >
@@ -150,7 +147,7 @@ const Navbar = () => {
                   key={item.id}
                   onClick={() => setOpen(!open)}
                   className={`${
-                    item.active ? "text-peach" : "text-slate-50"
+                    item.href === '' ? "text-peach" : "text-slate-50"
                   } hover:text-peach text-2xl uppercase`}
                   href={item.href}
                 >
