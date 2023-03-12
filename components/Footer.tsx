@@ -67,7 +67,7 @@ const Footer = () => {
             Athena Media
           </Link>
 
-          <nav className="flex flex-col lg:flex-row items-start lg:items-center mt-4 space-x-0 space-y-3 lg:space-y-3 lg:space-x-4">
+          <nav className="flex flex-col lg:flex-row items-start lg:items-center mt-4 space-x-0 space-y-3 lg:space-y-0 lg:space-x-4">
             {links.map((item) => (
               <Link
                 key={item.id}
