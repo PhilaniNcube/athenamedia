@@ -28,6 +28,14 @@ const projects = [
     mobileImage: "/images/hotwater24_mobile.png",
   },
   {
+    title: "Uhuru Impact",
+    details:
+      "This is a marketing website for a an investment advisory firm",
+    url: "https://uhuruimpact.africa",
+    image: "/images/uhuru_desktop.png",
+    mobileImage: "/images/uhuru_mobile.png",
+  },
+  {
     title: "Solarquest",
     details:
       "This is a marketing & lead generation website for Solar Power & Battery Backup solutions",

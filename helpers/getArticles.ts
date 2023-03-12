@@ -36,6 +36,22 @@ const getArticles = async () => {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+const fetchArticle = async (id:string) => {
+  try {
+  const res = await fetch(`${url}/api/blogs/${id}?populate=*`)
+   const data = await res.json()
+   return [data, null]
+}  catch (err) {
+  console.error(err)
+  return [null, err]
+}
+}
+
+
+>>>>>>> 62e5bbc68d401ff7730c4383dc62616e129ec0dc
 export const getArticle = async (id:string) => {
   const [data, error] = await fetchArticle(id)
 

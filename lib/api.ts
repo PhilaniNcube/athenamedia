@@ -13,3 +13,4 @@ export const sendContactForm = async (data:ContactData) => fetch(`/api/contact`,
         "Accept": "application/json",
       }
 })
+

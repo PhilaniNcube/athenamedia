@@ -41,10 +41,8 @@ const Navbar = () => {
       name: "Analytics",
 
     },
-
-
     {
-      id: 6,
+      id: 5,
       href: "/contact",
       name: "Contact",
 
