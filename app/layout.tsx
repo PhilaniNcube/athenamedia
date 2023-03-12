@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Script from "next/script";
 
 export const metadata = {
   title: "Athena Media",
@@ -84,6 +85,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-7EMZDBXJSS"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7EMZDBXJSS');
+        `}
+      </Script>
+
       <body>
         <Navbar />
         {children}
