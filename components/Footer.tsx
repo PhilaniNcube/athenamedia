@@ -102,7 +102,7 @@ const Footer = () => {
                 P +27 81 755 1279
               </h4>
               <h4 className="text-slate-200 text-xs md:text-sm">
-                E info@atenamedia.co.za
+                E info@athenamedia.co.za
               </h4>
             </div>
           </div>
