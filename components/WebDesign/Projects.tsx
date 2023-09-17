@@ -4,6 +4,14 @@ import {ChevronRightIcon} from "@heroicons/react/24/outline";
 
 const projects = [
   {
+    title: "Digital Shopper",
+    details:
+      "The website is an ecommerce store with a wide array of products.",
+    url: "http://www.digitalshopper.co.za",
+    image: "/images/digitalshopper-desktop.png",
+    mobileImage: "/images/digitalshopper-mobile.png",
+  },
+  {
     title: "Cape Gadgets",
     details:
       "The website is an ecommerce store catering to university students in South Africa.",
@@ -79,7 +87,7 @@ const projects = [
     title: "Popp Inn",
     details:
       "This is a website for an holiday accommodation provider in Johannesburg",
-    url: "https://photosnap-two.vercel.app/",
+    url: "https://poppinn.co.za/",
     image: "/images/poppinn_desktop.png",
     mobileImage: "/images/poppinn_mobile.png",
   },
