@@ -5,8 +5,7 @@ import {ChevronRightIcon} from "@heroicons/react/24/outline";
 const projects = [
   {
     title: "Digital Shopper",
-    details:
-      "The website is an ecommerce store with a wide array of products.",
+    details: "The website is an ecommerce store with a wide array of products.",
     url: "http://www.digitalshopper.co.za",
     image: "/images/digitalshopper-desktop.png",
     mobileImage: "/images/digitalshopper-mobile.png",
@@ -37,8 +36,7 @@ const projects = [
   },
   {
     title: "Uhuru Impact",
-    details:
-      "This is a marketing website for a an investment advisory firm",
+    details: "This is a marketing website for a an investment advisory firm",
     url: "https://uhuruimpact.africa",
     image: "/images/uhuru_desktop.png",
     mobileImage: "/images/uhuru_mobile.png",
@@ -68,20 +66,20 @@ const projects = [
   //   mobileImage: "/images/scriptedbeauty_mobile.png",
   // },
   {
-    title: "Art Gallery",
+    title: "Changemaker Network",
     details:
-      "This is a website for a trendy Art Gallery so customers can can have an idea of the Gallery",
-    url: "https://art-gallery-sage.vercel.app/",
-    image: "/images/mobilegallery_desktop.png",
-    mobileImage: "/images/mobilegallery_mobile.png",
+      "This is a website for a charitable organisation that focuses on the youth",
+    url: "https://www.changemaker-network.org/",
+    image: "/images/changemaker_desktop.png",
+    mobileImage: "/images/changemaker_mobile.png",
   },
   {
-    title: "Photosnap",
+    title: "Glambeads",
     details:
-      "This is a website showing a photographers portfolio of work he has completed.",
-    url: "https://photosnap-two.vercel.app/",
-    image: "/images/photosnap_desktop.png",
-    mobileImage: "/images/photosnap_mobile.png",
+      "This is a website for a business that sells handmade beaded jewellery",
+    url: "https://www.glambeads.co.za/",
+    image: "/images/glambeads_desktop.png",
+    mobileImage: "/images/glambeads_mobile.png",
   },
   {
     title: "Popp Inn",
@@ -116,7 +114,7 @@ const Projects = () => {
               width={1911}
               height={876}
               alt="Project Image"
-              className="object-cover w-full aspect-auto"
+              className="object-cover w-full h-48 aspect-auto"
             />
             <div className="px-10 py-10 ">
               <p className="text-xl font-medium text-center uppercase text-peach">
