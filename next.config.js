@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
+
+  // Add the following line to your next.config.js file
   images: {
-    domains: ["momentous-wacky-advice.fra1.digitaloceanspaces.com"],
-  },
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'example.com',
+      }
+    ]
+  }
 };

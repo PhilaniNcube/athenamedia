@@ -59,14 +59,14 @@ const projects = [
     image: "/images/africanexpressions_desktop.png",
     mobileImage: "/images/africanexpressions_mobile.png",
   },
-  {
-    title: "Script Beauty",
-    details:
-      "This is a marketing website for a service to be provided to social media influencers.",
-    url: "https://www.scriptbeauty.co.za",
-    image: "/images/scriptedbeauty_desktop.png",
-    mobileImage: "/images/scriptedbeauty_mobile.png",
-  },
+  // {
+  //   title: "Script Beauty",
+  //   details:
+  //     "This is a marketing website for a service to be provided to social media influencers.",
+  //   url: "https://www.scriptbeauty.co.za",
+  //   image: "/images/scriptedbeauty_desktop.png",
+  //   mobileImage: "/images/scriptedbeauty_mobile.png",
+  // },
   {
     title: "Art Gallery",
     details:
@@ -104,22 +104,22 @@ const projects = [
 const Projects = () => {
   return (
     <section className="my-8">
-      <div className="max-w-7xl mx-auto px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 px-4 mx-auto max-w-7xl lg:px-0 lg:grid-cols-3">
         {projects.map((item, i) => (
           <Link
             href={item.url}
-            key={i}
-            className="w-full shadow rounded-xl overflow-hidden"
+            key={item.url}
+            className="w-full overflow-hidden shadow rounded-xl"
           >
             <Image
               src={item.image}
               width={1911}
               height={876}
               alt="Project Image"
-              className="w-full aspect-auto object-cover"
+              className="object-cover w-full aspect-auto"
             />
             <div className="px-10 py-10 ">
-              <p className="text-xl text-peach text-center uppercase font-medium">
+              <p className="text-xl font-medium text-center uppercase text-peach">
                 {item.title}
               </p>
               <p className="mt-2 text-base text-center">{item.details}</p>
@@ -127,50 +127,50 @@ const Projects = () => {
           </Link>
         ))}
       </div>
-      <div className="max-w-7xl mx-auto mt-12 px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="w-full relative isolate rounded-2xl overflow-hidden">
+      <div className="grid grid-cols-1 gap-6 px-4 mx-auto mt-12 max-w-7xl lg:px-0 lg:grid-cols-2">
+        <div className="relative w-full overflow-hidden isolate rounded-2xl">
           <Image
             src="/images/analytics.jpeg"
             width={3000}
             height={2000}
             alt="Website Analytics"
-            className="w-full aspect-video object-cover"
+            className="object-cover w-full aspect-video"
           />
-          <div className="absolute inset-0 bg-slate-700/60 flex flex-col justify-center items-center text-center">
-            <h3 className="text-white text-lg md:text-2xl lg:text-3xl font-medium uppercase">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-slate-700/60">
+            <h3 className="text-lg font-medium text-white uppercase md:text-2xl lg:text-3xl">
               Website Analytics
             </h3>
-            <span className="flex items-center space-x-2 mt-3">
+            <span className="flex items-center mt-3 space-x-2">
               <Link
                 href="/website-analytics"
-                className="text-white text-sm lg:text-lg uppercase hover:text-peach"
+                className="text-sm text-white uppercase lg:text-lg hover:text-peach"
               >
                 View Services
               </Link>
-              <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8 text-peach" />
+              <ChevronRightIcon className="w-6 h-6 lg:h-8 lg:w-8 text-peach" />
             </span>
           </div>
         </div>
-        <div className="w-full relative isolate rounded-2xl overflow-hidden">
+        <div className="relative w-full overflow-hidden isolate rounded-2xl">
           <Image
             src="/images/digital-marketing.jpeg"
             width={3000}
             height={2000}
             alt="Graphic Design"
-            className="w-full aspect-video object-cover"
+            className="object-cover w-full aspect-video"
           />
-          <div className="absolute inset-0 bg-slate-700/60 flex flex-col justify-center items-center text-center">
-            <h3 className="text-white text-lg md:text-2xl lg:text-3xl font-medium uppercase">
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center bg-slate-700/60">
+            <h3 className="text-lg font-medium text-white uppercase md:text-2xl lg:text-3xl">
               Digital Marketing
             </h3>
-            <span className="flex items-center space-x-2 mt-3">
+            <span className="flex items-center mt-3 space-x-2">
               <Link
                 href="/digital-marketing"
-                className="text-white text-sm lg:text-lg uppercase hover:text-peach"
+                className="text-sm text-white uppercase lg:text-lg hover:text-peach"
               >
                 View Services
               </Link>
-              <ChevronRightIcon className="h-6 w-6 lg:h-8 lg:w-8 text-peach" />
+              <ChevronRightIcon className="w-6 h-6 lg:h-8 lg:w-8 text-peach" />
             </span>
           </div>
         </div>

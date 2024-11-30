@@ -7,6 +7,8 @@ import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
 import analytics from "../../utils/analytics";
 import { useRouter } from "next/navigation";
+import { startTransition, useActionState } from "react";
+import { sendEmailAction } from "../../actions/email-action";
 
 interface FormInputs {
   name: string;
@@ -27,6 +29,8 @@ const ContactForm = () => {
 
   } = useForm<FormInputs>();
 
+  const [state, formAction, isPending] = useActionState(sendEmailAction, null)
+
    const onSubmit = async (data: FormInputs) => {
 
 
@@ -39,10 +43,10 @@ const ContactForm = () => {
 
 
   return (
-    <section className="py-12 px-4 ">
-      <div className="max-w-7xl mx-auto  bg-peach relative isolate overflow-hidden rounded-2xl">
+    <section className="px-4 py-12 ">
+      <div className="relative mx-auto overflow-hidden max-w-7xl bg-peach isolate rounded-2xl">
         <svg
-          className="absolute top-0 left-0 h-full object-cover -translate-x-10 -z-10"
+          className="absolute top-0 left-0 object-cover h-full -translate-x-10 -z-10"
           width="640"
           height="640"
           xmlns="http://www.w3.org/2000/svg"
@@ -63,51 +67,60 @@ const ContactForm = () => {
             opacity=".309"
           />
         </svg>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2">
           <div className="p-8 lg:p-16">
-            <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium">
+            <h1 className="text-2xl font-medium text-white md:text-3xl lg:text-4xl">
               Contact Us
             </h1>
-            <p className="text-white mt-2 text-md mb-5 lg:text-lg">
+            <p className="mt-2 mb-5 text-white text-md lg:text-lg">
               {" "}
               Ready to take it to the next level? Let’s talk about your project
               or idea and find out how we can help your business grow. If you
               are looking for unique digital experiences that’s relatable to
               your users, drop us a line.
             </p>
-            {/* <p className="text-white mt-2 text-md lg:text-lg">
+            {/* <p className="mt-2 text-white text-md lg:text-lg">
               {" "}
               P : 078 3115 1400
             </p> */}
-            <Link href="mailto:info@athenamedia.co.za"  className="text-white mt-5 text-md lg:text-lg">
+            <Link
+              href="mailto:info@athenamedia.co.za"
+              className="mt-5 text-white text-md lg:text-lg"
+            >
               {" "}
               M : info@athenamedia.co.za
             </Link>
           </div>
           <div className="w-full p-8 lg:p-16">
-            <form onSubmit={handleSubmit(onSubmit)} className="text-white">
-              <div className="flex flex-col w-full relative isolate">
+            <form
+              action={(formData: FormData) => {
+                startTransition(() => {
+                  formAction(formData);
+                });
+              }}
+              className="text-white"
+            >
+              <div className="relative flex flex-col w-full isolate">
                 <label className="hidden" htmlFor="name">
                   Name
                 </label>
                 <input
                   {...register("name", {
                     required: "Name Cannot be empty.",
-
                   })}
                   id="name"
                   name="name"
-                  className="bg-peach focus:bg-transparent border-b focus:border-b-2 text-lg focus:outline-none px-4 py-2 placeholder:text-slate-200"
+                  className="px-4 py-2 text-lg border-b bg-peach focus:bg-transparent focus:border-b-2 focus:outline-none placeholder:text-slate-200"
                   placeholder="Name"
                 />{" "}
                 {errors.name && (
-                  <span className="absolute top-2 right-0 flex space-x-4">
+                  <span className="absolute right-0 flex space-x-4 top-2">
                     <p className="italic">{errors.name.message}</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
                       height="20"
-                      className="h-8 w-8"
+                      className="w-8 h-8"
                     >
                       <g fill="none" fill-rule="evenodd">
                         <circle cx="10" cy="10" r="10" fill="#FFF" />
@@ -120,7 +133,7 @@ const ContactForm = () => {
                   </span>
                 )}
               </div>
-              <div className="flex flex-col w-full mt-2 relative isolate">
+              <div className="relative flex flex-col w-full mt-2 isolate">
                 <label className="hidden" htmlFor="email">
                   Email Address
                 </label>
@@ -132,17 +145,18 @@ const ContactForm = () => {
                   id="email"
                   name="email"
                   autoComplete="email-address"
-                  className="bg-transparent border-b focus:border-b-2 text-lg focus:outline-none px-4 py-2 placeholder:text-slate-200"
+                  className="px-4 py-2 text-lg bg-transparent border-b focus:border-b-2 focus:outline-none placeholder:text-slate-200"
                   placeholder="Email Address"
                 />
                 {errors.email ? (
                   <span className="absolute top-0 right-0 flex space-x-4">
                     <p className="italic">{errors.email.message}</p>
-
                   </span>
-                ) : ""}
+                ) : (
+                  ""
+                )}
               </div>
-              <div className="flex flex-col w-full mt-2 relative isolate">
+              <div className="relative flex flex-col w-full mt-2 isolate">
                 <label className="hidden" htmlFor="tel">
                   Phone
                 </label>
@@ -152,9 +166,9 @@ const ContactForm = () => {
                   })}
                   type="tel"
                   id="tel"
-                  name="tel"
+                  name="phone"
                   autoComplete="telephone"
-                  className="bg-transparent border-b focus:border-b-2 text-lg focus:outline-none px-4 py-2 placeholder:text-slate-200"
+                  className="px-4 py-2 text-lg bg-transparent border-b focus:border-b-2 focus:outline-none placeholder:text-slate-200"
                   placeholder="Phone"
                 />{" "}
                 {errors.tel ? (
@@ -164,7 +178,7 @@ const ContactForm = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
                       height="20"
-                      className="h-8 w-8"
+                      className="w-8 h-8"
                     >
                       <g fill="none" fill-rule="evenodd">
                         <circle cx="10" cy="10" r="10" fill="#FFF" />
@@ -175,9 +189,11 @@ const ContactForm = () => {
                       </g>
                     </svg>
                   </span>
-                ): ""}
+                ) : (
+                  ""
+                )}
               </div>
-              <div className="flex flex-col w-full mt-4 relative isolate">
+              <div className="relative flex flex-col w-full mt-4 isolate">
                 <label className="hidden" htmlFor="message">
                   Phone
                 </label>
@@ -189,14 +205,27 @@ const ContactForm = () => {
                   id="message"
                   name="message"
                   autoComplete="message"
-                  className="bg-transparent border-b focus:border-b-2 text-lg focus:outline-none px-4 py-2 placeholder:text-slate-200"
+                  className="px-4 py-2 text-lg bg-transparent border-b focus:border-b-2 focus:outline-none placeholder:text-slate-200"
                   placeholder="Your Message"
                 />
               </div>
-              <div className="mt-6 flex justify-end">
-                <LightButton>Submit</LightButton>
+              <div className="flex justify-end mt-6">
+                <button
+                  className="p-3 rounded bg-slate-200 text-slate-800 w-[150px]"
+                  disabled={isPending}
+                >
+                  {isPending ? "Sending..." : "Submit"}
+                </button>
               </div>
             </form>
+            {state?.error && (
+              <div className="mt-4 text-red-500">{state.error}</div>
+            )}
+            {state?.message && (
+              <div className="px-2 py-2 mt-4 text-green-500 bg-white rounded">
+                {state.message}
+              </div>
+            )}
           </div>
         </div>
       </div>

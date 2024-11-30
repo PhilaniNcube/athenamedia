@@ -1,13 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-import {
-  RiFacebookBoxFill,
-  RiYoutubeFill,
-  RiTwitterFill,
-  RiInstagramLine,
-} from "react-icons/ri";
+import Link from "next/link";
+
+
+
 
 const Footer = () => {
 
@@ -51,14 +46,14 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 pt-28 pb-16">
-        <div className="max-w-7xl py-2  border-b border-slate-100/30 mx-auto items-center lg:flex justify-between">
+      <div className="px-4 pb-16 mx-auto max-w-7xl pt-28">
+        <div className="items-center justify-between py-2 mx-auto border-b max-w-7xl border-slate-100/30 lg:flex">
           <Link
             href="/"
-            className="cursor-pointer font-bold uppercase text-xl text-peach"
+            className="text-xl font-bold uppercase cursor-pointer text-peach"
           >
             {/* <Image
-            className="w-48 object-cover"
+            className="object-cover w-48"
             src="/assets/shared/desktop/logo-dark.png"
             alt="logo"
             width={404}
@@ -67,7 +62,7 @@ const Footer = () => {
             Athena Media
           </Link>
 
-          <nav className="flex flex-col lg:flex-row items-start lg:items-center mt-4 space-x-0 space-y-3 lg:space-y-0 lg:space-x-4">
+          <nav className="flex flex-col items-start mt-4 space-x-0 space-y-3 lg:flex-row lg:items-center lg:space-y-0 lg:space-x-4">
             {links.map((item) => (
               <Link
                 key={item.id}
@@ -81,32 +76,32 @@ const Footer = () => {
             ))}
           </nav>
         </div>
-        <div className="mt-8 w-full  flex flex-col md:flex-wrap md:items-center">
-          <div className="flex-1 flex w-full justify-between">
+        <div className="flex flex-col w-full mt-8 md:flex-wrap md:items-center">
+          <div className="flex justify-between flex-1 w-full">
             <div>
-              <h4 className="text-slate-200 text-xs md:text-sm font-bold">
-                Port Elizabeth Central Office
+              <h4 className="text-xs font-bold text-slate-200 md:text-sm">
+                Address
               </h4>
-              <h4 className="text-slate-200 text-xs md:text-sm">
-                16 Strand Avenue, Humewood
+              <h4 className="text-xs text-slate-200 md:text-sm">
+                9 Athlone Street, Mount Pleasant
               </h4>
-              <h4 className="text-slate-200 text-xs md:text-sm">
+              <h4 className="text-xs text-slate-200 md:text-sm">
                 Port Elizabeth, 6001
               </h4>
             </div>
             <div>
-              <h4 className="text-slate-200 text-xs md:text-sm font-bold">
-                Contact Us (Main Office)
+              <h4 className="text-xs font-bold text-slate-200 md:text-sm">
+                Contact Us
               </h4>
-              <h4 className="text-slate-200 text-xs md:text-sm">
+              <h4 className="text-xs text-slate-200 md:text-sm">
                 P +27 81 755 1279
               </h4>
-              <h4 className="text-slate-200 text-xs md:text-sm">
+              <h4 className="text-xs text-slate-200 md:text-sm">
                 E info@athenamedia.co.za
               </h4>
             </div>
           </div>
-          <div className="hidden flex-1 py-4  space-x-3 justify-end items-center">
+          <div className="items-center justify-end flex-1 hidden py-4 space-x-3">
 
           </div>
         </div>

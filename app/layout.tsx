@@ -2,21 +2,21 @@ import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: {
     default: "Athena Media",
     template: "%s | Athena Media",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+
   applicationName: "Athena Media",
+
   description:
     "Create a unique online presence with our custom website design services. We specialize in crafting visually stunning and user-friendly websites that are tailored to your brand's needs and goals. Let us bring your vision to life and elevate your online identity with our expert team of designers and developers.",
+
   referrer: "origin-when-cross-origin",
+
   keywords: [
     "Website design",
     "Custom websites",
@@ -35,6 +35,7 @@ export const metadata = {
     "Website maintenance",
     "Web security",
   ],
+
   authors: [
     { name: "Philani Ncube" },
     { name: "Philani Ncube", url: "https://philanincube.co.za" },
@@ -42,6 +43,7 @@ export const metadata = {
 
   creator: "Philani Ncube",
   publisher: "Athena Media",
+
   openGraph: {
     title: "Athena Media",
     description:
@@ -58,6 +60,7 @@ export const metadata = {
     locale: "en-ZA",
     type: "website",
   },
+
   robots: {
     index: true,
     follow: true,
@@ -71,6 +74,7 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Athena Media",
@@ -80,7 +84,7 @@ export const metadata = {
     images: [
       "https://www.athenamedia.co.za/_next/image?url=%2Fassets%2Fhome%2Fdesktop%2Fhero-phone.png&w=640&q=75",
     ],
-  },
+  }
 };
 
 export default function RootLayout({
@@ -93,19 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-7EMZDBXJSS"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-7EMZDBXJSS');
-        `}
-      </Script>
-
+      <GoogleAnalytics gaId="G-7EMZDBXJSS" />
       <body>
         <Navbar />
         {children}
@@ -114,3 +106,9 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1
+};
