@@ -2,7 +2,7 @@ import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: {
@@ -97,7 +97,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <GoogleAnalytics gaId="G-7EMZDBXJSS" />
+      <GoogleTagManager gtmId="GTM-MTCLCZR" />
       <body>
         <Navbar />
         {children}

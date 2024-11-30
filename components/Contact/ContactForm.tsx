@@ -1,14 +1,14 @@
 "use client"
 
-import Image from "next/image";
-import {  LightButton } from "../Buttons/Button";
+
 import { useForm } from "react-hook-form";
 import { sendContactForm } from "../../lib/api";
 import Link from "next/link";
-import analytics from "../../utils/analytics";
+
 import { useRouter } from "next/navigation";
 import { startTransition, useActionState } from "react";
 import { sendEmailAction } from "../../actions/email-action";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 interface FormInputs {
   name: string;
@@ -31,15 +31,9 @@ const ContactForm = () => {
 
   const [state, formAction, isPending] = useActionState(sendEmailAction, null)
 
-   const onSubmit = async (data: FormInputs) => {
+  const gtmEvent = () => {
 
-
-   await sendContactForm(data)
-
-    alert('Thank you for contacting us. We will be in touch with you soon!')
-    router.push(`/website-analytics`)
-   };
-
+  }
 
 
   return (
@@ -96,6 +90,9 @@ const ContactForm = () => {
               action={(formData: FormData) => {
                 startTransition(() => {
                   formAction(formData);
+                  sendGTMEvent({ event: "GTM-MTCLCZR", value: {
+                   email: formData.get("email"),
+                  } });
                 });
               }}
               className="text-white"
