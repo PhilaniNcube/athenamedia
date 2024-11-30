@@ -1,8 +1,7 @@
 import "./globals.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Script from "next/script";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: {
@@ -84,7 +83,7 @@ export const metadata = {
     images: [
       "https://www.athenamedia.co.za/_next/image?url=%2Fassets%2Fhome%2Fdesktop%2Fhero-phone.png&w=640&q=75",
     ],
-  }
+  },
 };
 
 export default function RootLayout({
@@ -96,7 +95,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
       <GoogleTagManager gtmId="GTM-MTCLCZR" />
       <body>
         <Navbar />
@@ -110,5 +108,5 @@ export default function RootLayout({
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1
+  maximumScale: 1,
 };
