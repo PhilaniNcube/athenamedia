@@ -90,7 +90,7 @@ const ContactForm = () => {
               action={(formData: FormData) => {
                 startTransition(() => {
                   formAction(formData);
-                  sendGTMEvent({ event: "GTM-MTCLCZR", value: {
+                  sendGTMEvent({ event: "generate_lead", value: {
                    email: formData.get("email"),
                   } });
                 });
