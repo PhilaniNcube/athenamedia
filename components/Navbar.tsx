@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -10,61 +10,43 @@ import { useState } from "react";
 import { RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
-
-  const [open, setOpen] = useState(false)
-
+  const [open, setOpen] = useState(false);
 
   const links = [
     {
       id: 1,
       href: "/company",
       name: "Our Company",
-
     },
     {
       id: 2,
       href: "/web-development",
       name: "Web Development",
-
     },
 
     {
       id: 3,
       href: "/digital-marketing",
       name: "Marketing",
-
     },
 
     {
       id: 4,
       href: "/website-analytics",
       name: "Analytics",
-
     },
     {
       id: 5,
       href: "/contact",
       name: "Contact",
-
     },
   ];
-
 
   return (
     <header className="py-3">
       {/**Desktop Navigation**/}
-      <div className="max-w-7xl py-2 hidden  mx-auto px-4 items-center md:flex  justify-between">
-        <Link
-          href="/"
-          className="cursor-pointer font-bold uppercase text-xl text-peach"
-        >
-          {/* <Image
-            className="w-48 object-cover"
-            src="/assets/shared/desktop/logo-dark.png"
-            alt="logo"
-            width={404}
-            height={54}
-          /> */}
+      <div className="items-center justify-between hidden px-4 py-2 mx-auto max-w-7xl md:flex">
+        <Link href="/" className="text-xl font-bold uppercase cursor-pointer ">
           Athena Media
         </Link>
 
@@ -73,7 +55,7 @@ const Navbar = () => {
             <Link
               key={item.id}
               className={`${
-                item.href === '' ? "text-peach" : "text-slate-800"
+                item.href === "" ? "text-peach" : "text-slate-800"
               } hover:text-peach text-lg uppercase`}
               href={item.href}
             >
@@ -84,13 +66,13 @@ const Navbar = () => {
       </div>
 
       {/***Mobile Nav */}
-      <div className="py-8 md:hidden mx-auto px-4 items-center flex justify-between  overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-8 mx-auto overflow-hidden md:hidden">
         <Link
           href="/"
-          className="cursor-pointer uppercase text-xl text-peach font-bold"
+          className="text-xl font-bold uppercase cursor-pointer text-peach"
         >
           {/* <Image
-            className="w-36 object-cover"
+            className="object-cover w-36"
             src="/assets/shared/desktop/logo-dark.png"
             alt="logo"
             width={404}
@@ -101,25 +83,25 @@ const Navbar = () => {
         {open ? (
           <XMarkIcon
             onClick={() => setOpen(!open)}
-            className="text-slate-900 h-8 w-8"
+            className="w-8 h-8 text-slate-900"
           />
         ) : (
           <Bars3Icon
             onClick={() => setOpen(!open)}
-            className="text-slate-900 h-8 w-8"
+            className="w-8 h-8 text-slate-900"
           />
         )}
 
         {open && (
           <div className="absolute inset-0 bg-slate-50 z-20 h-[50vh]">
-            <div className="py-8 md:hidden mx-auto px-4 items-center flex justify-between  overflow-hidden">
+            <div className="flex items-center justify-between px-4 py-8 mx-auto overflow-hidden md:hidden">
               <Link
                 href="/"
-                className="cursor-pointer uppercase text-xl text-peach font-bold"
+                className="text-xl font-bold uppercase cursor-pointer text-peach"
                 onClick={() => setOpen(!open)}
               >
                 {/* <Image
-            className="w-36 object-cover"
+            className="object-cover w-36"
             src="/assets/shared/desktop/logo-dark.png"
             alt="logo"
             width={404}
@@ -130,12 +112,12 @@ const Navbar = () => {
               {open ? (
                 <XMarkIcon
                   onClick={() => setOpen(!open)}
-                  className="text-slate-900 h-8 w-8"
+                  className="w-8 h-8 text-slate-900"
                 />
               ) : (
                 <Bars3Icon
                   onClick={() => setOpen(!open)}
-                  className="text-slate-900 h-8 w-8"
+                  className="w-8 h-8 text-slate-900"
                 />
               )}
             </div>
@@ -145,7 +127,7 @@ const Navbar = () => {
                   key={item.id}
                   onClick={() => setOpen(!open)}
                   className={`${
-                    item.href === '' ? "text-peach" : "text-slate-50"
+                    item.href === "" ? "text-peach" : "text-slate-50"
                   } hover:text-peach text-2xl uppercase`}
                   href={item.href}
                 >

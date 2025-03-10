@@ -1,11 +1,6 @@
-
 import Link from "next/link";
 
-
-
-
 const Footer = () => {
-
   // const router = useRouter();
 
   const links = [
@@ -13,34 +8,29 @@ const Footer = () => {
       id: 1,
       href: "/company",
       name: "Our Company",
-
     },
     {
       id: 2,
       href: "/web-development",
       name: "Web Development",
-
     },
 
     {
       id: 3,
       href: "/digital-marketing",
       name: "Marketing",
-
     },
 
     {
       id: 4,
       href: "/website-analytics",
       name: "Analytics",
-
     },
 
     {
       id: 6,
       href: "/contact",
       name: "Contact",
-
     },
   ];
 
@@ -67,7 +57,7 @@ const Footer = () => {
               <Link
                 key={item.id}
                 className={`${
-                  item.href === '' ? "text-peach" : "text-slate-50"
+                  item.href === "" ? "text-peach" : "text-slate-50"
                 } hover:text-peach text-lg uppercase`}
                 href={item.href}
               >
@@ -79,31 +69,29 @@ const Footer = () => {
         <div className="flex flex-col w-full mt-8 md:flex-wrap md:items-center">
           <div className="flex justify-between flex-1 w-full">
             <div>
-              <h4 className="text-xs font-bold text-slate-200 md:text-sm">
+              <h5 className="text-xs font-bold text-slate-200 md:text-sm">
                 Address
-              </h4>
-              <h4 className="text-xs text-slate-200 md:text-sm">
+              </h5>
+              <h5 className="text-xs text-slate-200 md:text-sm">
                 9 Athlone Street, Mount Pleasant
-              </h4>
-              <h4 className="text-xs text-slate-200 md:text-sm">
+              </h5>
+              <h5 className="text-xs text-slate-200 md:text-sm">
                 Port Elizabeth, 6001
-              </h4>
+              </h5>
             </div>
             <div>
               <h4 className="text-xs font-bold text-slate-200 md:text-sm">
                 Contact Us
               </h4>
-              <h4 className="text-xs text-slate-200 md:text-sm">
+              <h5 className="text-xs text-slate-200 md:text-sm">
                 P +27 81 755 1279
-              </h4>
-              <h4 className="text-xs text-slate-200 md:text-sm">
+              </h5>
+              <h5 className="text-xs text-slate-200 md:text-sm">
                 E info@athenamedia.co.za
-              </h4>
+              </h5>
             </div>
           </div>
-          <div className="items-center justify-end flex-1 hidden py-4 space-x-3">
-
-          </div>
+          <div className="items-center justify-end flex-1 hidden py-4 space-x-3"></div>
         </div>
       </div>
     </footer>

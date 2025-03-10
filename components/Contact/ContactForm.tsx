@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 
 import { useForm } from "react-hook-form";
 import { sendContactForm } from "../../lib/api";
@@ -18,23 +17,18 @@ interface FormInputs {
 }
 
 const ContactForm = () => {
-
-  const router = useRouter()
+  const router = useRouter();
 
   const {
     register,
     setError,
     formState: { errors },
     handleSubmit,
-
   } = useForm<FormInputs>();
 
-  const [state, formAction, isPending] = useActionState(sendEmailAction, null)
+  const [state, formAction, isPending] = useActionState(sendEmailAction, null);
 
-  const gtmEvent = () => {
-
-  }
-
+  const gtmEvent = () => {};
 
   return (
     <section className="px-4 py-12 ">
@@ -63,10 +57,10 @@ const ContactForm = () => {
         </svg>
         <div className="grid w-full grid-cols-1 md:grid-cols-2">
           <div className="p-8 lg:p-16">
-            <h1 className="text-2xl font-medium text-white md:text-3xl lg:text-4xl">
+            <h1 className="text-2xl font-medium text-slate-950 md:text-3xl lg:text-4xl">
               Contact Us
             </h1>
-            <p className="mt-2 mb-5 text-white text-md lg:text-lg">
+            <p className="mt-2 mb-5 text-slate-950 text-md lg:text-lg">
               {" "}
               Ready to take it to the next level? Let’s talk about your project
               or idea and find out how we can help your business grow. If you
@@ -79,7 +73,7 @@ const ContactForm = () => {
             </p> */}
             <Link
               href="mailto:info@athenamedia.co.za"
-              className="mt-5 text-white text-md lg:text-lg"
+              className="mt-5 text-slate-950 text-md lg:text-lg"
             >
               {" "}
               M : info@athenamedia.co.za
@@ -90,9 +84,12 @@ const ContactForm = () => {
               action={(formData: FormData) => {
                 startTransition(() => {
                   formAction(formData);
-                  sendGTMEvent({ event: "generate_lead", value: {
-                   email: formData.get("email"),
-                  } });
+                  sendGTMEvent({
+                    event: "generate_lead",
+                    value: {
+                      email: formData.get("email"),
+                    },
+                  });
                 });
               }}
               className="text-white"
