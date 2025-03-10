@@ -1,20 +1,24 @@
+import Image from "next/image";
+
 const SectionTwo = () => {
   return (
-    <section className="my-20 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-24">
+    <section className="px-4 my-20">
+      <div className="grid grid-cols-1 gap-8 mx-auto max-w-7xl md:grid-cols-3 lg:gap-24">
         <div className="w-full">
-          <div className="rounded-full w-full aspect-square bg-slate-200">
-            <img
+          <div className="w-full rounded-full aspect-square bg-slate-200">
+            <Image
+              width={202}
+              height={202}
               src="/assets/home/desktop/passionate.svg"
-              className="w-full object-cover"
+              className="object-cover w-full"
               alt="Passionate"
             />
           </div>
           <div className="mt-4">
-            <h4 className="font-medium text-center tracking-wider text-slate-800 text-2xl uppercase">
+            <h4 className="text-2xl font-medium tracking-wider text-center uppercase text-slate-800">
               Experienced & Professional
             </h4>
-            <p className="text-base text-slate-700 leading-7 text-center">
+            <p className="text-base leading-7 text-center text-slate-700">
               Our team of experienced web designers and developers have a proven
               track record of creating high-quality, effective websites for a
               wide range of businesses and organizations. We are dedicated to
@@ -24,18 +28,20 @@ const SectionTwo = () => {
           </div>
         </div>
         <div className="w-full">
-          <div className="rounded-full w-full aspect-square bg-slate-200">
-            <img
+          <div className="w-full rounded-full aspect-square bg-slate-200">
+            <Image
+              width={202}
+              height={202}
               src="/assets/home/desktop/resourceful.svg"
-              className="w-full object-cover"
+              className="object-cover w-full"
               alt="Resourceful"
             />
           </div>
           <div className="mt-4">
-            <h4 className="font-medium text-center tracking-wider text-slate-800 text-2xl uppercase">
+            <h4 className="text-2xl font-medium tracking-wider text-center uppercase text-slate-800">
               Customized and Flexible Solutions
             </h4>
-            <p className="text-base text-slate-700 leading-7 text-center">
+            <p className="text-base leading-7 text-center text-slate-700">
               We understand that every business is different, and we pride
               ourselves on our ability to create customized website solutions
               that meet the specific needs and goals of our clients. We are
@@ -46,18 +52,20 @@ const SectionTwo = () => {
           </div>
         </div>
         <div className="w-full">
-          <div className="rounded-full w-full aspect-square bg-slate-200">
-            <img
+          <div className="w-full rounded-full aspect-square bg-slate-200">
+            <Image
+              width={202}
+              height={202}
               src="/assets/home/desktop/friendly.svg"
-              className="w-full object-cover"
+              className="object-cover w-full"
               alt="Friendly"
             />
           </div>
           <div className="mt-4">
-            <h4 className="font-medium text-center tracking-wider text-slate-800 text-2xl uppercase">
+            <h4 className="text-2xl font-medium tracking-wider text-center uppercase text-slate-800">
               Ongoing Support and Maintenance
             </h4>
-            <p className="text-base text-slate-700 leading-7 text-center">
+            <p className="text-base leading-7 text-center text-slate-700">
               Creating a successful website is not a one-time event, and we are
               committed to providing ongoing support and maintenance to ensure
               that your website continues to perform at its best. We offer a
