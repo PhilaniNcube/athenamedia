@@ -48,7 +48,7 @@ const Hero = () => {
               width={624}
               height={913}
               alt="Hero Image"
-              src="/assets/home/desktop/hero-phone.png"
+              src="/assets/home/desktop/hero-phone.webp"
               priority
               quality={90}
               className="w-full md:w-[67vh] object-center object-cover col-span-1"
