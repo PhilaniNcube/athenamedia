@@ -100,13 +100,6 @@ const Navbar = () => {
                 className="text-xl font-bold uppercase cursor-pointer text-slate-950"
                 onClick={() => setOpen(!open)}
               >
-                {/* <Image
-            className="object-cover w-36"
-            src="/assets/shared/desktop/logo-dark.png"
-            alt="logo"
-            width={404}
-            height={54}
-          /> */}
                 Athena Media
               </Link>
               {open ? (
