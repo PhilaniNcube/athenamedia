@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-4 py-8 mx-auto overflow-hidden md:hidden">
         <Link
           href="/"
-          className="text-xl font-bold uppercase cursor-pointer text-peach"
+          className="text-xl font-bold uppercase cursor-pointer text-slate-950"
         >
           {/* <Image
             className="object-cover w-36"
@@ -97,7 +97,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between px-4 py-8 mx-auto overflow-hidden md:hidden">
               <Link
                 href="/"
-                className="text-xl font-bold uppercase cursor-pointer text-peach"
+                className="text-xl font-bold uppercase cursor-pointer text-slate-950"
                 onClick={() => setOpen(!open)}
               >
                 {/* <Image
