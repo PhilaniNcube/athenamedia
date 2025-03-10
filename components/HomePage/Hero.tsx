@@ -5,7 +5,7 @@ import { LightButton } from "../Buttons/Button";
 const Hero = () => {
   return (
     <section className="py-6">
-      <div className="max-w-7xl mx-auto px-4 bg-peach relative overflow-hidden py-10 md:rounded-3xl min-h-[70vh] max-h-[75vh] ">
+      <div className="max-w-7xl mx-auto px-4 bg-peach relative overflow-hidden py-10 md:rounded-3xl md:min-h-[70vh] max-h-[75vh] ">
         <svg
           className="absolute top-0 bottom-0 right-0 h-full"
           width="640"
@@ -43,7 +43,7 @@ const Hero = () => {
               <LightButton>Lets Talk</LightButton>
             </Link>
           </div>
-          <div className="flex justify-center col-span-2 -translate-y-10 md:translate-y-0 md:col-span-1">
+          <div className="justify-center hidden -translate-y-10 md:flex md:translate-y-0 md:col-span-1">
             <Image
               width={624}
               height={913}
